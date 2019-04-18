@@ -17,6 +17,33 @@
   <mat-progress-spinner
   color="primary"
   [mode]="spinnerMode"
-  value="0">
-</mat-progress-spinner>
+  [value]="i*20"> 
+</mat-progress-spinner> <!-- dentro do [value] o valor que esta recebendo será de uma variavel, no caso sera o (i).
+Os colchetes eu digo que quero acessar algum metodo ou executar algo, logo dentro de =" " eu posso fazer calculo!! -->
 </section>
+
+<section>
+  
+  <mat-card>
+    <mat-card-content>
+      <p>
+          <mat-checkbox color="warn" (change)="cbChange($event)"> Disable / Enagle</mat-checkbox>
+      </p>
+      <mat-form-field>
+        <mat-select matNativeControl required [disabled]="selectDisabled" (selectionChange)="selectionChange($event)">
+          <mat-option value="1">Volvo</mat-option>
+          <mat-option value="2">Saab</mat-option>
+          <mat-option value="3">Mercedes</mat-option>
+          <mat-option value="4">Audi</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card-actions>
+    <p>Selected Option: {{selectedOption}}</p>
+  </mat-card-actions>
+
+
+  </section>
+

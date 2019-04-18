@@ -11,7 +11,8 @@ export class EventBindingComponent implements OnInit {
   spinnerMode = 'determinate'; // Atributo acessado pelos colchetes!
   btnEnable = true;
   i = 0;
-
+  selectDisabled = false;
+  selectedOption = 1;
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class EventBindingComponent implements OnInit {
 
   save() {
     console.log('Click');
+    this.i = 0;
   }
 
   inc() {
@@ -33,5 +35,15 @@ export class EventBindingComponent implements OnInit {
       this.btnEnable = true;
       this.spinnerMode = 'determinate';
     } , 3000);
+  }
+
+  cbChange(event) {
+    console.log(event);
+    this.selectDisabled = event.checked;
+  }
+
+  selectionChange(event){
+    console.log(event)
+    this.selectedOption = event.value;
   }
 }
