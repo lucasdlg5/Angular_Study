@@ -7,10 +7,12 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
