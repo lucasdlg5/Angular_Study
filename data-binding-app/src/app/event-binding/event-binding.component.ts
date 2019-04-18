@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
+  buttonName = 'My Button';
+  spinnerMode = 'determinate'; // Atributo acessado pelos colchetes!
+  btnEnable = true;
+  i = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  save() {
+    console.log('Click');
+  }
+
+  inc() {
+    this.i++;
+    this.buttonName = 'It was clicked ' + this.i + ' Times ';
+  }
+
+  disable() {
+    this.btnEnable = false;
+    this.spinnerMode = 'indeterminate';
+    setTimeout( () => {
+      this.btnEnable = true;
+      this.spinnerMode = 'determinate';
+    } , 3000);
+  }
 }
