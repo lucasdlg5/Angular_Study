@@ -3,10 +3,16 @@
 </p>
 
 
+<mat-divider></mat-divider>
+
+
 <section>
   <button mat-button color="primary" (click)='save()'>Iniciar</button>
   <button mat-button color="warn" (click)='inc()'>{{buttonName}}</button>
 </section>
+
+
+<mat-divider></mat-divider>
 
 
 <section>
@@ -22,8 +28,11 @@
 Os colchetes eu digo que quero acessar algum metodo ou executar algo, logo dentro de =" " eu posso fazer calculo!! -->
 </section>
 
+
+<mat-divider></mat-divider>
+
+
 <section>
-  
   <mat-card>
     <mat-card-content>
       <p>
@@ -38,12 +47,26 @@ Os colchetes eu digo que quero acessar algum metodo ou executar algo, logo dentr
         </mat-select>
       </mat-form-field>
     </mat-card-content>
+    <mat-card-actions>
+      <p>Selected Option: {{selectedOption}}</p>
+    </mat-card-actions>
   </mat-card>
-
-  <mat-card-actions>
-    <p>Selected Option: {{selectedOption}}</p>
-  </mat-card-actions>
+  </section>
 
 
+<mat-divider></mat-divider>
+
+
+  <section>
+    <mat-card>
+      <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="First Name" (input)="inputEvent($event.target.value)" [value]="inputName">
+      </mat-form-field>
+    </mat-card-content>
+    Nome: {{inputName}}
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
   </section>
 
