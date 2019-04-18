@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MyFirstComponent } from './myfirst.component';
 import { MySecondComponent } from './my-second/my-second.component';
+import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 @NgModule({
   declarations: [
     AppComponent,
     MyFirstComponent,
-    MySecondComponent
+    MySecondComponent,
+    TwowaybindingComponent
   ],
   imports: [
     BrowserModule
