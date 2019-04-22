@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./two-way-binding.component.css']
 })
 export class TwoWayBindingComponent implements OnInit {
-
+  name1 = '';
+  name2 = '';
+  client = {
+    firstName: 'John',
+    lastName: 'Mack',
+    address: '',
+    age: 0
+  };
   constructor() { }
 
   ngOnInit() {
