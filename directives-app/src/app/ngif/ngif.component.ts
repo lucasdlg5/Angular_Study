@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngif.component.css']
 })
 export class NgifComponent implements OnInit {
-
-  constructor() { }
+  showName = false;
+  showAddress = false;
+  showPhone = false;
+  showAge = false;
+  constructor() {}
 
   ngOnInit() {
   }
