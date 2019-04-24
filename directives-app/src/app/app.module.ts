@@ -7,12 +7,14 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule, MatRadioModule, MatCardModule } from '@angular/material';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgifComponent } from './ngif/ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule,
